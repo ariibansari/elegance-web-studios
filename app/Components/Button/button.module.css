@@ -1,0 +1,33 @@
+.button {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    padding: calc(var(--fs-6) * 0.7) calc(var(--fs-3) * 1.2);
+    border-radius: 40px;
+    font-size: var(--fs-5);
+    background-color: var(--color-bg);
+    border: 1px solid transparent;
+}
+
+.dot {
+    position: absolute;
+    background-color: black;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 300ms ease, background-color 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.button:hover {
+    background-color: transparent;
+    color: var(--color-bg);
+    border: 1px solid var(--color-secondary);
+}
+
+.button:hover .dot {
+    transform: translate(-50%, -50%) scale(500);
+    transition: transform 2s ease, background-color 0.3s ease-in-out;
+    z-index: -1;
+}

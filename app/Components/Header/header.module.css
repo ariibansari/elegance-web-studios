@@ -1,0 +1,16 @@
+.header {
+    background-color: var(--color-secondary);
+    padding: 1rem var(--container-padding-x);
+}
+
+.header svg {
+    width: 8rem;
+}
+
+/* Tablets */
+@media (max-width: 1023px) {
+    .header svg {
+        width: 7rem;
+    }
+
+}
