@@ -1,0 +1,119 @@
+.topSection {
+    display: flex;
+    min-height: 80dvh;
+}
+
+.topSection .left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
+    padding: calc(var(--fs-1) * 2) var(--container-padding-x);
+}
+
+.left h2 {
+    font-size: var(--fs-2);
+    margin-bottom: 5dvh;
+}
+
+.left p {
+    margin-bottom: 3dvh;
+    font-weight: 300;
+}
+
+
+.topSection .right {
+    width: 50%;
+    overflow: hidden;
+}
+
+.topSection .right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.8);
+}
+
+
+.bottomSection {
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10dvh var(--container-padding-x);
+    flex-wrap: wrap;
+}
+
+.reason {
+    padding: 1rem;
+    margin-right: auto;
+    margin-bottom: 3dvh;
+}
+
+.reason .icon {
+    position: relative;
+}
+
+.reason .icon .circle {
+    position: absolute;
+    width: calc(var(--fs-2) * 0.6);
+    height: calc(var(--fs-2) * 0.6);
+    background-color: var(--color-secondary);
+    border-radius: 100%;
+    bottom: -30%;
+    left: var(--fs-3);
+    z-index: 1;
+    transition: all 300ms ease-in-out;
+}
+
+.reason .icon svg {
+    width: var(--fs-2);
+    height: var(--fs-2);
+    object-fit: cove;
+}
+
+.reason h3 {
+    font-size: var(--fs-3);
+    padding: 2dvh 0;
+    font-weight: 500;
+    transition: color 200ms ease-in-out;
+    position: relative;
+    z-index: 2;
+}
+
+.reason p {
+    font-size: var(--fs-5);
+    color: var(--color-light);
+    width: 20rem;
+    transition: color 200ms ease-in-out;
+    position: relative;
+    z-index: 2;
+}
+
+.reason:hover p,
+.reason:hover h3 {
+    color: var(--color-bg) !important;
+}
+
+.reason:hover .circle {
+    scale: 800%;
+    left: 15%;
+    bottom: -270%;
+}
+
+@media (max-width: 767px) {
+    .topSection {
+        flex-direction: column-reverse;
+    }
+
+    .topSection .left,
+    .topSection .right {
+        width: 100%;
+    }
+
+    .topSection .right{
+        height: 50dvh;
+    }
+}

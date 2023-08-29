@@ -1,5 +1,7 @@
 import Header from "./Components/Header/Header";
-import Hero from "./Components/Hero/Hero";
+import Hero from "./Components/Home/Hero/Hero";
+import Reasons from "./Components/Home/Reasons/Reasons";
+import Services from "./Components/Home/Services/Services";
 
 export default function Home() {
   return (
@@ -7,6 +9,8 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Reasons />
+        <Services />
       </main>
     </>
   )

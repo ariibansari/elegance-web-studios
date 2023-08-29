@@ -1,8 +1,8 @@
 "use client"
 import React from 'react'
 import styles from './hero.module.css'
-import Underline from '../Extra/Underline'
-import Button from '../Button/Button'
+import Underline from '../../Extra/Underline'
+import Button from '../../Button/Button'
 
 const Hero = () => {
 
@@ -27,7 +27,6 @@ const Hero = () => {
                 </div>
                 <Button
                     text="Get The Party Started"
-                    onClick={() => alert("jel")}
                 />
             </div>
         </section>
