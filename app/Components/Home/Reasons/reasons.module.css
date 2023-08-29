@@ -56,7 +56,7 @@
     position: relative;
 }
 
-.reason .icon .circle {
+/* .reason .icon .circle {
     position: absolute;
     width: calc(var(--fs-2) * 0.6);
     height: calc(var(--fs-2) * 0.6);
@@ -66,7 +66,64 @@
     left: var(--fs-3);
     z-index: 1;
     transition: all 300ms ease-in-out;
+    transform-origin: center;
+    animation: reasonOnBlurAnimation 300ms linear forwards;
 }
+
+.reason:hover .circle {
+    animation: reasonOnHoverAnimation 300ms linear forwards;
+}
+
+@keyframes reasonOnBlurAnimation {
+    0% {
+        scale: 800%;
+        bottom: -270%;
+    }
+    
+    100% {
+        scale: 100%;
+        bottom: -10%;
+    }
+    
+}
+
+@keyframes reasonOnHoverAnimation {
+    0% {
+        scale: 100%;
+        bottom: -10%;
+    }
+    
+    80% {
+        scale: 900%;
+        bottom: -290%;
+    }
+    100% {
+        scale: 800%;
+        bottom: -270%;
+    }
+} */
+
+.reason .icon .circle {
+    position: absolute;
+    width: calc(var(--fs-2) * 0.6);
+    height: calc(var(--fs-2) * 0.6);
+    background-color: var(--color-secondary);
+    border-radius: 100%;
+    bottom: -30%;
+    left: var(--fs-3);
+    z-index: 1;
+    transform-origin: center;
+    transition: transform 400ms ease-in-out, bottom 400ms ease-in-out, left 400ms ease-in-out;
+}
+
+.reason:hover .circle {
+    /* transform: scale(9) translateY(55%) translateX(20%);
+    bottom: -10%; */
+    transform: scale(9);
+    bottom: -340%;
+    left: calc(var(--fs-3) + 20%);
+}
+
 
 .reason .icon svg {
     width: var(--fs-2);
@@ -85,6 +142,7 @@
 
 .reason p {
     font-size: var(--fs-5);
+    font-weight: 300;
     color: var(--color-light);
     width: 20rem;
     transition: color 200ms ease-in-out;
@@ -97,11 +155,7 @@
     color: var(--color-bg) !important;
 }
 
-.reason:hover .circle {
-    scale: 800%;
-    left: 15%;
-    bottom: -270%;
-}
+
 
 @media (max-width: 767px) {
     .topSection {
@@ -113,7 +167,7 @@
         width: 100%;
     }
 
-    .topSection .right{
+    .topSection .right {
         height: 50dvh;
     }
 }
